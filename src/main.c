@@ -1,10 +1,7 @@
-#include <tice.h>
 #include <graphx.h>
 #include <stdlib.h>
-#include "gfx/gfx.h"
+#include "constants.h"
 #include "player.h"
-
-#define FLOOR_HEIGHT (LCD_HEIGHT - floor_sprite_height)
 
 void begin();
 void end();
@@ -32,8 +29,7 @@ void begin() {
 	gfx_SetPalette(global_palette, sizeof_global_palette, 0);
 	gfx_SetTransparentColor(0);
 
-	player.x = 0;
-	player.y = 0;
+	player = Player_new();
 }
 
 void end() {
@@ -41,8 +37,7 @@ void end() {
 }
 
 bool step() {
-	player.x++;
-	player.y++;
+	Player_update(&player);
 
 	return !os_GetCSC();
 }

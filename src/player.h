@@ -1,6 +1,14 @@
 #pragma once
 
+#include <stdint.h>
+
 typedef struct {
-	uint16_t x;
-	uint16_t y;
+	float x;
+	float y;
+	float xvel;
+	float yvel;
 } Player;
+
+Player Player_new();
+
+void Player_update(Player *player);
