@@ -45,8 +45,15 @@ bool step() {
 void draw() {
 	gfx_FillScreen(50);
 
+	gfx_TransparentSprite_NoClip(left_wall_sprite, 0, 0);
+	gfx_TransparentSprite_NoClip(left_wall_sprite, 0, LCD_HEIGHT / 2);
+	gfx_TransparentSprite_NoClip(right_wall_sprite, LCD_WIDTH - 29, 0);
+	gfx_TransparentSprite_NoClip(
+			right_wall_sprite, LCD_WIDTH - 29, LCD_HEIGHT / 2);
+
 	gfx_TransparentSprite(floor_sprite, 0, FLOOR_HEIGHT);
 	gfx_TransparentSprite(floor_sprite, floor_sprite_width, FLOOR_HEIGHT);
+
 	gfx_TransparentSprite(player_sprite, player.x, player.y);
 
 	gfx_SwapDraw();

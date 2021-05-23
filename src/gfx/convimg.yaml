@@ -11,6 +11,8 @@ converts:
     images:
       - player_sprite.png
       - floor_sprite.png
+      - left_wall_sprite.png
+      - right_wall_sprite.png
 
 outputs:
   - type: c
