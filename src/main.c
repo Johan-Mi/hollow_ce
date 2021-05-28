@@ -1,14 +1,14 @@
 #include <graphx.h>
 #include <stdlib.h>
 #include "constants.h"
-#include "player.h"
+#include "game.h"
 
 void begin();
 void end();
 bool step();
 void draw();
 
-Player player;
+Game game;
 
 int main() {
 	begin();
@@ -29,7 +29,7 @@ void begin() {
 	gfx_SetPalette(global_palette, sizeof_global_palette, 0);
 	gfx_SetTransparentColor(0);
 
-	player = Player_new();
+	game = Game_new();
 }
 
 void end() {
@@ -37,12 +37,14 @@ void end() {
 }
 
 bool step() {
-	Player_update(&player);
+	Game_update(&game);
 
 	return !os_GetCSC();
 }
 
 void draw() {
+	Player *player = &game.player;
+
 	gfx_FillScreen(50);
 
 	gfx_TransparentSprite_NoClip(left_wall_sprite, 0, 0);
@@ -54,7 +56,7 @@ void draw() {
 	gfx_TransparentSprite(floor_sprite, 0, FLOOR_HEIGHT);
 	gfx_TransparentSprite(floor_sprite, floor_sprite_width, FLOOR_HEIGHT);
 
-	gfx_TransparentSprite(player_sprite, player.x, player.y);
+	gfx_TransparentSprite(player_sprite, player->x, player->y);
 
 	gfx_SwapDraw();
 }

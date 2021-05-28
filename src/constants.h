@@ -9,3 +9,4 @@
 #define FLOOR_HEIGHT (LCD_HEIGHT - floor_sprite_height)
 
 #define PLAYER_HEIGHT 45
+#define PLAYER_WALK_SPEED 5

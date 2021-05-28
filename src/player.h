@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdbool.h>
 #include <stdint.h>
 
 typedef struct {
@@ -10,5 +11,3 @@ typedef struct {
 } Player;
 
 Player Player_new();
-
-void Player_update(Player *player);
