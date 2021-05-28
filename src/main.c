@@ -1,4 +1,5 @@
 #include <graphx.h>
+#include <keypadc.h>
 #include <stdlib.h>
 #include "constants.h"
 #include "game.h"
@@ -39,7 +40,7 @@ void end() {
 bool step() {
 	Game_update(&game);
 
-	return !os_GetCSC();
+	return !(kb_Data[6] & kb_Clear);
 }
 
 void draw() {

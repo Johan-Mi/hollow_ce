@@ -6,5 +6,7 @@ Player Player_new() {
 			.y = 0.0,
 			.xvel = 0.0,
 			.yvel = 0.0,
+
+			.on_ground = false,
 	};
 }

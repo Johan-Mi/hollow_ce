@@ -8,6 +8,8 @@ typedef struct {
 	float y;
 	float xvel;
 	float yvel;
+
+	bool on_ground;
 } Player;
 
 Player Player_new();
