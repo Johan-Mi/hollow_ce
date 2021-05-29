@@ -10,6 +10,8 @@ typedef struct {
 	float yvel;
 
 	bool on_ground;
+
+	unsigned jump_time;
 } Player;
 
 Player Player_new();

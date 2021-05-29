@@ -8,5 +8,7 @@ Player Player_new() {
 			.yvel = 0.0,
 
 			.on_ground = false,
+
+			.jump_time = 0,
 	};
 }

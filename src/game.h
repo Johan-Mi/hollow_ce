@@ -6,6 +6,7 @@
 typedef struct {
 	Player player;
 	Keys keys;
+	Keys keys_prev;
 } Game;
 
 Game Game_new();
