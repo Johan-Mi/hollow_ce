@@ -18,11 +18,9 @@ converts:
       - player_walk_right_1_sprite.png
       - player_walk_right_2_sprite.png
       - player_walk_right_3_sprite.png
-      - player_walk_right_4_sprite.png
       - player_walk_left_1_sprite.png
       - player_walk_left_2_sprite.png
       - player_walk_left_3_sprite.png
-      - player_walk_left_4_sprite.png
 
 outputs:
   - type: c

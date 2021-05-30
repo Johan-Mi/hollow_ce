@@ -28,8 +28,6 @@ gfx_rletsprite_t *Player_sprite(Player *self) {
 					return player_walk_right_2_sprite;
 				case 3:
 					return player_walk_right_3_sprite;
-				case 4:
-					return player_walk_right_4_sprite;
 			}
 		} else {
 			walk_time = -walk_time;
@@ -40,8 +38,6 @@ gfx_rletsprite_t *Player_sprite(Player *self) {
 					return player_walk_left_2_sprite;
 				case 3:
 					return player_walk_left_3_sprite;
-				case 4:
-					return player_walk_left_4_sprite;
 			}
 		}
 	} else if(self->direction == Left) {

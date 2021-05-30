@@ -45,7 +45,7 @@ void update_player(Game *game) {
 
 			if(player->on_ground && player->walk_time >= 0) {
 				player->walk_time++;
-				if(player->walk_time > PLAYER_WALK_ANIMATION_SPEED * 4) {
+				if(player->walk_time > PLAYER_WALK_ANIMATION_SPEED * 3) {
 					player->walk_time = 1;
 				}
 			}
@@ -55,7 +55,7 @@ void update_player(Game *game) {
 
 			if(player->on_ground && player->walk_time <= 0) {
 				player->walk_time--;
-				if(player->walk_time < PLAYER_WALK_ANIMATION_SPEED * -4) {
+				if(player->walk_time < PLAYER_WALK_ANIMATION_SPEED * -3) {
 					player->walk_time = -1;
 				}
 			}
