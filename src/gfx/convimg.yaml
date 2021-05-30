@@ -10,10 +10,19 @@ converts:
     transparent-color-index: 0
     style: rlet
     images:
-      - player_sprite.png
-      - floor_sprite.png
-      - left_wall_sprite.png
       - right_wall_sprite.png
+      - left_wall_sprite.png
+      - floor_sprite.png
+      - player_idle_right_sprite.png
+      - player_idle_left_sprite.png
+      - player_walk_right_1_sprite.png
+      - player_walk_right_2_sprite.png
+      - player_walk_right_3_sprite.png
+      - player_walk_right_4_sprite.png
+      - player_walk_left_1_sprite.png
+      - player_walk_left_2_sprite.png
+      - player_walk_left_3_sprite.png
+      - player_walk_left_4_sprite.png
 
 outputs:
   - type: c

@@ -41,9 +41,27 @@ void update_player(Game *game) {
 	if(keys->left != keys->right) {
 		if(keys->right) {
 			player->xvel = PLAYER_WALK_SPEED;
+			player->direction = Right;
+
+			if(player->on_ground && player->walk_time >= 0) {
+				player->walk_time++;
+				if(player->walk_time > PLAYER_WALK_ANIMATION_SPEED * 4) {
+					player->walk_time = 1;
+				}
+			}
 		} else {
 			player->xvel = -PLAYER_WALK_SPEED;
+			player->direction = Left;
+
+			if(player->on_ground && player->walk_time <= 0) {
+				player->walk_time--;
+				if(player->walk_time < PLAYER_WALK_ANIMATION_SPEED * -4) {
+					player->walk_time = -1;
+				}
+			}
 		}
+	} else {
+		player->walk_time = 0;
 	}
 
 	player->xvel *= FRICTION;
