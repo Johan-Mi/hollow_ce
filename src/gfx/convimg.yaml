@@ -8,6 +8,7 @@ converts:
   - name: sprites
     palette: global_palette
     transparent-color-index: 0
+    style: rlet
     images:
       - player_sprite.png
       - floor_sprite.png
