@@ -7,7 +7,7 @@
 #define MAX_YVEL 7
 #define FRICTION 0.1
 
-#define FLOOR_HEIGHT (LCD_HEIGHT - floor_sprite_height)
+#define FLOOR_HEIGHT (LCD_HEIGHT - floor_sprite_height + 2)
 #define WALL_WIDTH (left_wall_sprite_width - 4)
 
 #define PLAYER_HEIGHT 45

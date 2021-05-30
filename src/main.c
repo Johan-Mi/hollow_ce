@@ -53,8 +53,9 @@ void draw() {
 	gfx_RLETSprite_NoClip(right_wall_sprite, LCD_WIDTH - 29, 0);
 	gfx_RLETSprite_NoClip(right_wall_sprite, LCD_WIDTH - 29, LCD_HEIGHT / 2);
 
-	gfx_RLETSprite(floor_sprite, 0, FLOOR_HEIGHT);
-	gfx_RLETSprite(floor_sprite, floor_sprite_width, FLOOR_HEIGHT);
+	gfx_RLETSprite(floor_sprite, 0, LCD_HEIGHT - floor_sprite_height);
+	gfx_RLETSprite(
+			floor_sprite, floor_sprite_width, LCD_HEIGHT - floor_sprite_height);
 
 	gfx_RLETSprite(Player_sprite(player), player->x, player->y);
 
