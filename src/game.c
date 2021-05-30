@@ -48,6 +48,8 @@ void update_player(Game *game) {
 				if(player->walk_time > PLAYER_WALK_ANIMATION_SPEED * 3) {
 					player->walk_time = 1;
 				}
+			} else {
+				player->walk_time = 0;
 			}
 		} else {
 			player->xvel = -PLAYER_WALK_SPEED;
@@ -58,6 +60,8 @@ void update_player(Game *game) {
 				if(player->walk_time < PLAYER_WALK_ANIMATION_SPEED * -3) {
 					player->walk_time = -1;
 				}
+			} else {
+				player->walk_time = 0;
 			}
 		}
 	} else {
