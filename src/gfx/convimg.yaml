@@ -3,6 +3,7 @@ palettes:
     images: automatic
     fixed-entries:
         - color: {index: 0, r: 255, g: 0, b: 0}
+        - color: {index: 1, r: 40, g: 87, b: 131}
 
 converts:
   - name: sprites
@@ -21,6 +22,8 @@ converts:
       - player_walk_left_1_sprite.png
       - player_walk_left_2_sprite.png
       - player_walk_left_3_sprite.png
+      - hornet_idle_right_sprite.png
+      - hornet_idle_left_sprite.png
 
 outputs:
   - type: c

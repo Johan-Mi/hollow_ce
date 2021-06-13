@@ -1,4 +1,5 @@
 #include "player.h"
+#include "gfx/gfx.h"
 #include "constants.h"
 
 Player Player_new() {
@@ -47,4 +48,8 @@ gfx_rletsprite_t *Player_sprite(Player *self) {
 	}
 
 	return player_idle_right_sprite;
+}
+
+void Player_render(Player *self) {
+	gfx_RLETSprite_NoClip(Player_sprite(self), self->x, self->y);
 }

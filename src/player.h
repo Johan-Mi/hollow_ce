@@ -3,7 +3,6 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <graphx.h>
-#include "gfx/gfx.h"
 #include "direction.h"
 
 typedef struct {
@@ -21,5 +20,4 @@ typedef struct {
 } Player;
 
 Player Player_new();
-
-gfx_rletsprite_t *Player_sprite(Player *self);
+void Player_render(Player *self);

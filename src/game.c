@@ -6,6 +6,7 @@
 Game Game_new() {
 	return (Game){
 			.player = Player_new(),
+			.enemy = Enemy_new(),
 	};
 }
 
@@ -90,4 +91,22 @@ void update_player(Game *game) {
 void Game_update(Game *self) {
 	update_keys(self);
 	update_player(self);
+}
+
+void Game_render(Game *self) {
+	gfx_FillScreen(1);
+
+	gfx_RLETSprite_NoClip(left_wall_sprite, 0, 0);
+	gfx_RLETSprite_NoClip(left_wall_sprite, 0, LCD_HEIGHT / 2);
+	gfx_RLETSprite_NoClip(right_wall_sprite, LCD_WIDTH - 29, 0);
+	gfx_RLETSprite_NoClip(right_wall_sprite, LCD_WIDTH - 29, LCD_HEIGHT / 2);
+
+	gfx_RLETSprite(floor_sprite, 0, LCD_HEIGHT - floor_sprite_height);
+	gfx_RLETSprite(
+			floor_sprite, floor_sprite_width, LCD_HEIGHT - floor_sprite_height);
+
+	Enemy_render(&self->enemy);
+	Player_render(&self->player);
+
+	gfx_SwapDraw();
 }
