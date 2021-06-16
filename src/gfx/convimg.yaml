@@ -24,6 +24,14 @@ converts:
       - player_walk_left_3_sprite.png
       - hornet_idle_right_sprite.png
       - hornet_idle_left_sprite.png
+      - hornet_run_right_1_sprite.png
+      - hornet_run_right_2_sprite.png
+      - hornet_run_right_3_sprite.png
+      - hornet_run_right_4_sprite.png
+      - hornet_run_left_1_sprite.png
+      - hornet_run_left_2_sprite.png
+      - hornet_run_left_3_sprite.png
+      - hornet_run_left_4_sprite.png
 
 outputs:
   - type: c
