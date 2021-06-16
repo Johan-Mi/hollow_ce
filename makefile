@@ -2,7 +2,7 @@ NAME ?= HOLLOWCE
 ICON ?= icon.png
 DESCRIPTION ?= "Hollow CE"
 COMPRESSED ?= NO
-ARCHIVED ?= NO
+ARCHIVED ?= YES
 
 CFLAGS ?= -Wall -Wextra -Oz
 CXXFLAGS ?= -Wall -Wextra -Oz
