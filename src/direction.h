@@ -1,3 +1,3 @@
 #pragma once
 
-typedef enum { Left, Right } LeftRight;
+typedef enum { Left, Right } __attribute__((packed)) LeftRight;

@@ -5,7 +5,7 @@
 
 typedef enum {
 	ES_Idle,
-} EnemyState;
+} __attribute__((packed)) EnemyState;
 
 typedef struct {
 	float x;
