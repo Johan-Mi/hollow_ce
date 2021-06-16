@@ -91,6 +91,8 @@ void update_player(Game *game) {
 void Game_update(Game *self) {
 	update_keys(self);
 	update_player(self);
+
+	self->enemy.timer++;
 }
 
 void Game_render(Game *self) {
