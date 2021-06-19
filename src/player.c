@@ -20,34 +20,26 @@ Player Player_new() {
 
 gfx_rletsprite_t *Player_sprite(Player *self) {
 	if(self->on_ground && self->walk_time) {
-		int8_t walk_time = self->walk_time;
-		if(walk_time > 0) {
-			switch((walk_time - 1) / PLAYER_WALK_ANIMATION_SPEED + 1) {
-				case 1:
-					return player_walk_right_1_sprite;
-				case 2:
-					return player_walk_right_2_sprite;
-				case 3:
-					return player_walk_right_3_sprite;
-			}
+		uint8_t animation_index
+				= (self->walk_time - 1) / PLAYER_WALK_ANIMATION_SPEED;
+		if(self->direction == Right) {
+			return (gfx_rletsprite_t *[]){
+					player_walk_right_1_sprite,
+					player_walk_right_2_sprite,
+					player_walk_right_3_sprite,
+			}[animation_index];
 		} else {
-			walk_time = -walk_time;
-			switch((walk_time - 1) / PLAYER_WALK_ANIMATION_SPEED + 1) {
-				case 1:
-					return player_walk_left_1_sprite;
-				case 2:
-					return player_walk_left_2_sprite;
-				case 3:
-					return player_walk_left_3_sprite;
-			}
+			return (gfx_rletsprite_t *[]){
+					player_walk_left_1_sprite,
+					player_walk_left_2_sprite,
+					player_walk_left_3_sprite,
+			}[animation_index];
 		}
 	} else if(self->direction == Left) {
 		return player_idle_left_sprite;
 	} else {
 		return player_idle_right_sprite;
 	}
-
-	return player_idle_right_sprite;
 }
 
 void Player_render(Player *self) {

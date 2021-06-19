@@ -16,7 +16,7 @@ typedef struct {
 	bool on_ground;
 
 	unsigned jump_time;
-	int8_t walk_time;
+	uint8_t walk_time;
 } Player;
 
 Player Player_new();
